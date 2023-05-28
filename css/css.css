@@ -2,8 +2,10 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* min-height: 100vh; */
+    
 }
+
+@media (max-width: 576px) {
 
 .contenedor {
     display: grid;
@@ -13,12 +15,12 @@ body {
     "main"
     "paginacion"
     "footer";
-    /* grid-template-rows: 10% 15% 80% auto auto; */
+    
 }
 
 header {
     grid-area: header;
-    background-color: blue;
+    background-color: rgb(67 67 203);
     color: white;
     display: flex;
     justify-content: space-between;
@@ -26,9 +28,12 @@ header {
     height: 4rem;
 }
 
+.menuLateral {
+    display: none;
+}
+
 .icono {
     margin-right: 10px;
-    /* width: 3rem; */
 }
 .titulo {
     margin-left: 10px;
@@ -59,13 +64,14 @@ main {
 }
 
 .card{
-    border: 1px solid black;
+    border: 0.5px solid #e2dddd;
     padding: 1rem;
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 78%;
     margin-top: 1.5rem;
+    border-radius: 0.2rem;
 }
 
 .card img {
@@ -73,6 +79,14 @@ main {
     width: 90%;
     margin-top: 1rem;
     
+}
+
+.card input {
+    background-color: rgb(41, 41, 144);
+    color: white;
+    border: 0px;
+    border-radius: 3px;
+    padding: 0.7rem;
 }
 
 .paginacion {
@@ -85,9 +99,15 @@ main {
 }
 
 .paginacion div {
-    border: 0.1px solid grey;
+    border: 0.1px solid #d7d4d4;
     padding: 0.5rem;
+    color: rgb(60, 137, 230);
     
+}
+
+.paginacion div:hover {
+    background-color: gray;
+
 }
 
 .atras{
@@ -103,9 +123,177 @@ main {
 
 footer {
     grid-area: footer;
-    background-color: blue;
+    background-color: rgb(41, 41, 144);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    padding: 1rem;
 }
+
+
+}
+
+
+
+/* ////////////////////////////////////////////////////////// CSS para version desktop  //////////////////////////////*/ 
+
+@media (min-width: 576px) {
+    /* … */
+
+
+    .contenedor {
+        display: grid;
+        grid-template-areas: 
+        "header ordenar ordenar ordenar"
+        "header main main main"
+        "header main main main"
+        "footer paginacion paginacion paginacion";
+        /* grid-template-rows: 15%; */
+        min-height: 100vh;
+    }
+
+    header {
+        grid-area: header;
+        background-color: rgb(67 67 203);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        align-items: center;
+        /* height: 4rem; */
+        /* min-height: 100vh; */
+    }
+
+    .icono {
+        margin-right: 10px;
+    }
+
+    header .titulo {
+        margin-top: 1.5rem;
+    }
+
+    .menuHam {
+        display: none;
+    }
+
+    .menuLateral{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2rem;
+        gap: 10px;
+    }
+
+    .ordenar {
+        grid-area: ordenar;
+        background-color: gray;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem;
+    }
+
+    .ordenar select {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 0.3rem;
+    }
+
+    main {
+        grid-area: main;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        /* justify-content: space-between; */
+        justify-content: center;
+        gap: 1rem;
+        /* padding: 1rem; */
+    }
+
+    .card{
+        border: 0.5px solid #e2dddd;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 20%;
+        margin-top: 1.5rem;
+        border-radius: 0.2rem;
+    }
+
+    /* .card{
+        border: 0.5px solid #e2dddd;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 78%;
+        margin-top: 1.5rem;
+        border-radius: 0.2rem;
+    } */
+    
+    .card img {
+        background-size: cover;
+        width: 90%;
+        margin-top: 1rem;
+        
+    }
+    
+    .card input {
+        background-color: rgb(41, 41, 144);
+        color: white;
+        border: 0px;
+        border-radius: 3px;
+        padding: 0.7rem;
+    }
+    
+    .paginacion {
+        grid-area: paginacion;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0 2rem 0;
+        
+    }
+    
+    .paginacion div {
+        border: 0.1px solid #d7d4d4;
+        padding: 0.5rem;
+        color: rgb(60, 137, 230);
+        
+    }
+    
+    .paginacion div:hover {
+        background-color: gray;
+    
+    }
+    
+    .atras{
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+    
+    .siguiente{
+    
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+    
+
+    footer {
+        grid-area: footer;
+        background-color: rgb(41, 41, 144);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+
+  }
