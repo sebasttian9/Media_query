@@ -150,8 +150,7 @@ footer {
         "header main main main"
         "header main main main"
         "footer paginacion paginacion paginacion";
-        /* grid-template-rows: 15%; */
-        min-height: 100vh;
+           min-height: 100vh;
     }
 
     header {
@@ -160,10 +159,8 @@ footer {
         color: white;
         display: flex;
         flex-direction: column;
-        /* justify-content: space-between; */
         align-items: center;
-        /* height: 4rem; */
-        /* min-height: 100vh; */
+
     }
 
     .icono {
@@ -208,10 +205,8 @@ footer {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        /* justify-content: space-between; */
         justify-content: center;
         gap: 1rem;
-        /* padding: 1rem; */
     }
 
     .card{
@@ -224,17 +219,6 @@ footer {
         margin-top: 1.5rem;
         border-radius: 0.2rem;
     }
-
-    /* .card{
-        border: 0.5px solid #e2dddd;
-        padding: 1rem;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        width: 78%;
-        margin-top: 1.5rem;
-        border-radius: 0.2rem;
-    } */
     
     .card img {
         background-size: cover;
